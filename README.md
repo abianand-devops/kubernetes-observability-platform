@@ -1,3 +1,4 @@
+
 \# Kubernetes Observability Platform
 
 
@@ -74,3 +75,7 @@ Application → Prometheus → Alertmanager → Webhook → Incident system
 
 6\. Incident system can create ticket
 
+=======
+# kubernetes-observability-platform
+Kubernetes monitoring using Prometheus, Grafana, Alertmanager with incident automation
+>>>>>>> 6ef8bb1635525968167e00895a7907e031abb63e
