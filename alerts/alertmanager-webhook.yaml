@@ -1,0 +1,13 @@
+apiVersion: monitoring.coreos.com/v1alpha1
+kind: AlertmanagerConfig
+metadata:
+  name: webhook-config
+  namespace: monitoring
+spec:
+  route:
+    receiver: webhook
+    groupBy: ['alertname']
+  receivers:
+  - name: webhook
+    webhookConfigs:
+    - url: http://alert-webhook.incident.svc.cluster.local
