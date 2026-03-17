@@ -1,80 +1,64 @@
+﻿## 📊 Architecture
 
-\# Kubernetes Observability Platform
+Application → Prometheus → Alertmanager → Webhook → Incident System
 
+---
 
+## 📸 Screenshots
 
-This project demonstrates a production-style monitoring and incident response system for Kubernetes.
+### 📈 Grafana Dashboard
+![Dashboard](architecture/grafana-dashboard.png)
 
+### 🚨 Alert Firing
+![Alert](architecture/alert-firing.png)
 
+### ☸️ EKS Cluster
+![Cluster](architecture/eks-nodes.png)
 
-\## Stack
+### 🔔 Incident Webhook
+![Webhook](architecture/incident webhook.png)
 
+---
 
+## ⚙️ Features
 
-\- Amazon EKS
+- Kubernetes cluster monitoring
+- Custom Prometheus alert rules
+- Grafana dashboards for observability
+- Alertmanager routing
+- Incident automation via webhook
+- Multi-environment support (dev/prod)
 
-\- Prometheus
+---
 
-\- Grafana
+## 🚨 Alerts Implemented
 
-\- Alertmanager
+- High CPU usage
+- Node CPU saturation
+- Instant test alert
+- Pod restart detection
 
-\- Webhook incident automation
+---
 
+## ?? Incident Workflow
 
+1. CPU spike detected
+2. Prometheus evaluates metrics
+3. Alert rule triggers
+4. Alertmanager routes alert
+5. Webhook receives POST request
+6. Incident system can create ticket
 
-\## Architecture
+---
 
+## 💡 Use Case
 
+Designed for startups needing:
 
-Application → Prometheus → Alertmanager → Webhook → Incident system
-
-
-
-\## Features
-
-
-
-\- Kubernetes cluster monitoring
-
-\- Custom Prometheus alerts
-
-\- Grafana dashboards
-
-\- Incident webhook simulation
-
-\- Environment-based alerting (dev / prod)
-
-
-
-\## Alerts Implemented
-
-
-
-\- High CPU usage
-
-\- Test immediate alert
-
-\- Node CPU saturation
-
-
-
-\## Demo Workflow
-
-
-
-1\. Application generates high CPU load
-
-2\. Prometheus detects anomaly
-
-3\. Alert rule triggers
-
-4\. Alertmanager processes alert
-
-5\. Webhook receives alert payload
-
-6\. Incident system can create ticket
-
+- Kubernetes monitoring setup
+- Production alerting system
+- Incident automation
+- Reliability engineering support
 =======
 # kubernetes-observability-platform
 Kubernetes monitoring using Prometheus, Grafana, Alertmanager with incident automation
